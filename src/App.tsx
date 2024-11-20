@@ -1,13 +1,17 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { AuthProvider } from './features/authentication/context/AuthContext';
 import NavBar from './components/NavBar';
-import ProductList from './features/products/components/ProductList';
+import AppRoutes from './routes/AppRoutes';
 
 const App: React.FC = () => {
   return (
-    <div>
-      <NavBar />
-      <ProductList />
-    </div>
+    <AuthProvider>
+      <Router>
+        <NavBar />
+        <AppRoutes />
+      </Router>
+    </AuthProvider>
   );
 };
 
