@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import productService from '../services/productService';
-import ProductCard from './ProductCard';
+import ProductCard from '../components/ProductCard';
 import { Product, ProductResponse } from '../types';
 
 const ProductList: React.FC = () => {
